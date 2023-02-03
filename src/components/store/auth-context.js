@@ -4,7 +4,10 @@ import React from 'react';
 
 // component를 만드는 것은 아니지만, component 객체를 저장하므로 Component 처럼 선언
 const AuthContext = React.createContext({
-  isLoggedIn: false
+  isLoggedIn: false,
+
+  // IDE 자동 완성 기능 등 편의를 위해 dummy function을 넣을수도 있다.
+  onLogout: () => { }
 });
 
 export default AuthContext;
