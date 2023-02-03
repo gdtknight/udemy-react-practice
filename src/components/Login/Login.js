@@ -4,10 +4,6 @@ import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
 
-// component 함수 내부의 어떤 것도 필요하지 않음.
-// 따라서 component function 외부에 선언
-// useState -> [state, setStateFn]
-// useReducer -> [state, actionFnApplyToState]
 const emailReducer = (state, action) => {
   if (action.type == 'USER_INPUT') {
     return { value: action.val, isValid: action.val.includes('@') }
@@ -36,7 +32,6 @@ const Login = (props) => {
 
   const [formIsValid, setFormIsValid] = useState(false);
 
-  // emailReducer 가 dispatchEmail Function을 사용(consume).
   const [emailState, dispatchEmail] = useReducer(
     emailReducer, { value: '', isValid: false }
   );
@@ -45,9 +40,6 @@ const Login = (props) => {
     passwordReducer, { value: '', isValid: false }
   );
 
-  // js - destructuring, alias assignment
-  // prop 이 변경될 때마다 이펙트가 재실행 되는 것을 방지하고 싶을 때에도
-  // 아래와 같은 트릭을 사용한다.
   const { isValid: emailIsValid } = emailState;
   const { isValid: passwordIsValid } = passwordState;
 
