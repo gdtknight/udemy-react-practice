@@ -15,4 +15,8 @@ const Button = (props) => {
   );
 };
 
-export default Button;
+export default React.memo(Button);
+
+// 'false' === 'false'  -> `true` (String : primitive type)
+// props.show === props.previous.show -> `false` (props.show : reference type)
+// props.onClick === props.previous.onClick   ->  `false`
