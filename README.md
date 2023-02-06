@@ -34,3 +34,6 @@ Udemy discord community 에서 2월 28일까지 완강 챌린지 이벤트를 �
 
 ## Related Section
 - Section 08. 연습하기: 연습 프로젝트 완료 
+
+# Resource Link
+- [React Complete Guide Code Repository](https://github.com/academind/react-complete-guide-code)
