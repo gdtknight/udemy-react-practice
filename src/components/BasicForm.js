@@ -48,7 +48,6 @@ const BasicForm = (props) => {
     console.log('Submitted!');
     console.log(enteredFirstName + " " + enteredLastName + ", " + enteredEmail);
 
-
     firstNameReset();
     lastNameReset();
     emailReset();
